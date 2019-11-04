@@ -13,6 +13,7 @@
 		6EB7E88223701DFA000A19FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB7E88023701DFA000A19FD /* Main.storyboard */; };
 		6EB7E88423701DFC000A19FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EB7E88323701DFC000A19FD /* Assets.xcassets */; };
 		6EB7E88723701DFC000A19FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB7E88523701DFC000A19FD /* LaunchScreen.storyboard */; };
+		B40AAC692B0F3BE17EDC652D /* Pods_MergeTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94465F26E6DEE343AB7DA1BF /* Pods_MergeTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		6EB7E88323701DFC000A19FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EB7E88623701DFC000A19FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EB7E88823701DFC000A19FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9368A4AA0CD538ADAD11C772 /* Pods-MergeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MergeTest.release.xcconfig"; path = "Target Support Files/Pods-MergeTest/Pods-MergeTest.release.xcconfig"; sourceTree = "<group>"; };
+		94465F26E6DEE343AB7DA1BF /* Pods_MergeTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MergeTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB27CE9DABD612A7AC72D61 /* Pods-MergeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MergeTest.debug.xcconfig"; path = "Target Support Files/Pods-MergeTest/Pods-MergeTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B40AAC692B0F3BE17EDC652D /* Pods_MergeTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				6EB7E87923701DFA000A19FD /* MergeTest */,
 				6EB7E87823701DFA000A19FD /* Products */,
+				AB85D480F8E6697597EFD6D1 /* Pods */,
+				F7B7314AFD6E60FBA8EE045D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = MergeTest;
 			sourceTree = "<group>";
 		};
+		AB85D480F8E6697597EFD6D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBB27CE9DABD612A7AC72D61 /* Pods-MergeTest.debug.xcconfig */,
+				9368A4AA0CD538ADAD11C772 /* Pods-MergeTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F7B7314AFD6E60FBA8EE045D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94465F26E6DEE343AB7DA1BF /* Pods_MergeTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EB7E88B23701DFC000A19FD /* Build configuration list for PBXNativeTarget "MergeTest" */;
 			buildPhases = (
+				1A9C5AE6EA2136B82E0FD124 /* [CP] Check Pods Manifest.lock */,
 				6EB7E87323701DFA000A19FD /* Sources */,
 				6EB7E87423701DFA000A19FD /* Frameworks */,
 				6EB7E87523701DFA000A19FD /* Resources */,
+				70B9C18BE1EA102BA057137E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A9C5AE6EA2136B82E0FD124 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MergeTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70B9C18BE1EA102BA057137E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MergeTest/Pods-MergeTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MergeTest/Pods-MergeTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MergeTest/Pods-MergeTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6EB7E87323701DFA000A19FD /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		6EB7E88C23701DFC000A19FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBB27CE9DABD612A7AC72D61 /* Pods-MergeTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		6EB7E88D23701DFC000A19FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9368A4AA0CD538ADAD11C772 /* Pods-MergeTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

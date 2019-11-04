@@ -1,0 +1,16 @@
+PODS:
+  - UISwift (1.0.0)
+
+DEPENDENCIES:
+  - UISwift (from `MergedPods/UISwift`)
+
+EXTERNAL SOURCES:
+  UISwift:
+    :path: MergedPods/UISwift
+
+SPEC CHECKSUMS:
+  UISwift: 56766b7cb432145daa8a7c8c20db22783e11cd91
+
+PODFILE CHECKSUM: d801b87d845b11e656e05a4330703b70cbbdc7be
+
+COCOAPODS: 1.8.3
